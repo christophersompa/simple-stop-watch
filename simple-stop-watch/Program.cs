@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace simple_stop_watch
 {
@@ -19,7 +15,6 @@ namespace simple_stop_watch
 
             while (isRunning == true) {
 
-
                 Console.WriteLine("Action: 1. Start | 2. Stop | 3. Reset | 4. Exit");
 
                 string action = Console.ReadLine();
@@ -32,7 +27,6 @@ namespace simple_stop_watch
                 else if (action == "Stop" || action == "2")
                 {
                     stopwatch.Stop();
-
                     Console.WriteLine($"Time elapsed: {stopwatch.Elapsed}");
                 }
                 else if (action == "Reset" || action == "3")
@@ -43,6 +37,7 @@ namespace simple_stop_watch
                 else if (action == "Exit" || action == "4")
                 {
                     isRunning = false;
+                    Console.WriteLine("You have ended the project!");
                 }
                 else
                 {
